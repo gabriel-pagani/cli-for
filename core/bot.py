@@ -24,13 +24,13 @@ def bot(formatted_data: dict, clifor: str, insc_est: str = None) -> None:
 
     pyautogui.PAUSE = 0.3
 
-    smart_pyautogui.smart_click(image_path=r'C:\Users\gabriel.souza\Desktop\automation\assets\images\menu.png')
+    smart_pyautogui.smart_click(image_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\CliFor\automation\assets\images\menu.png')
 
-    smart_pyautogui.smart_click(image_path=r'C:\Users\gabriel.souza\Desktop\automation\assets\images\fechar.png')
+    smart_pyautogui.smart_click(image_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\CliFor\automation\assets\images\fechar.png')
 
     pyautogui.hotkey('ctrl', 'insert')
 
-    smart_pyautogui.smart_press(key='tab', flag_path=r'C:\Users\gabriel.souza\Desktop\automation\assets\images\cadastro_aberto.png')
+    smart_pyautogui.smart_press(key='tab', flag_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\CliFor\automation\assets\images\cadastro_aberto.png')
 
     pyautogui.write(clifor)
 
@@ -44,12 +44,12 @@ def bot(formatted_data: dict, clifor: str, insc_est: str = None) -> None:
 
     # Seleciona a classificação e Categoria
     if 'C' in clifor.upper():
-        smart_pyautogui.smart_click(image_path=r'C:\Users\gabriel.souza\Desktop\automation\assets\images\cliente.png')
+        smart_pyautogui.smart_click(image_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\CliFor\automation\assets\images\cliente.png')
 
     if 'F' in clifor.upper():
-        smart_pyautogui.smart_click(image_path=r'C:\Users\gabriel.souza\Desktop\automation\assets\images\fornecedor.png')
+        smart_pyautogui.smart_click(image_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\CliFor\automation\assets\images\fornecedor.png')
 
-    smart_pyautogui.smart_click(image_path=r'C:\Users\gabriel.souza\Desktop\automation\assets\images\juridica.png')
+    smart_pyautogui.smart_click(image_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\CliFor\automation\assets\images\juridica.png')
 
     # Escreve o CPF/CNPJ
     pyautogui.press('tab')
@@ -110,8 +110,8 @@ def bot(formatted_data: dict, clifor: str, insc_est: str = None) -> None:
     pyautogui.write(formatted_data['Email'])
 
     if insc_est and 'x' not in insc_est.lower():
-        smart_pyautogui.smart_click(image_path=r'C:\Users\gabriel.souza\Desktop\automation\assets\images\tributos.png')
-        smart_pyautogui.smart_click(image_path=r'C:\Users\gabriel.souza\Desktop\automation\assets\images\tipo_contribuinte.png')
+        smart_pyautogui.smart_click(image_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\CliFor\automation\assets\images\tributos.png')
+        smart_pyautogui.smart_click(image_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\CliFor\automation\assets\images\tipo_contribuinte.png')
         
         if 'I' in insc_est.upper():
             pyautogui.press('up')
@@ -121,7 +121,7 @@ def bot(formatted_data: dict, clifor: str, insc_est: str = None) -> None:
             pyautogui.press('tab')
 
     # Salva o cadastro
-    smart_pyautogui.smart_click(image_path=r'C:\Users\gabriel.souza\Desktop\automation\assets\images\salvar.png')
+    smart_pyautogui.smart_click(image_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\CliFor\automation\assets\images\salvar.png')
 
     # Espera o cadastro terminar e fecha a aba
-    smart_pyautogui.smart_click(x=114, y=168, flag_path=r'C:\Users\gabriel.souza\Desktop\automation\assets\images\flag_filtro.png')
+    smart_pyautogui.smart_click(x=114, y=168, flag_path=r'\\serverfile\users\Tecnologia\Softwares\Windows\CliFor\automation\assets\images\flag_filtro.png')
