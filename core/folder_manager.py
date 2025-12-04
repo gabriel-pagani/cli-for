@@ -43,10 +43,18 @@ def process_file(file: str, codes: dict) -> None:
 def monitor_folder() -> None:
     try:
         files = os.listdir(FOLDER)
-        for file in files:
+        valid_files = [f for f in files if f.lower().endswith('.pdf') and (f.lower().startswith('c') or f.lower().startswith('f'))]
+        
+        print("Automação iniciada....")
+        
+        for index, file in enumerate(valid_files, 1):
             codes = get_codes()
             if (file.lower().endswith('.pdf') and (file.lower().startswith('c') or file.lower().startswith('f'))):
                 process_file(file=file, codes=codes)
+                print(f"Arquivo {index} de {len(valid_files)} processado")
+        
+        print("Automação finalizada. Pressione Enter para fechar...")
+        input()
 
     except Exception:
         None
