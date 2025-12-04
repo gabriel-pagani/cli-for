@@ -45,7 +45,7 @@ def monitor_folder() -> None:
         files = os.listdir(FOLDER)
         valid_files = [f for f in files if f.lower().endswith('.pdf') and (f.lower().startswith('c') or f.lower().startswith('f'))]
         
-        print("Automação iniciada....")
+        print("Automação iniciada...")
         print(f"{len(valid_files)} arquivos encontrados!")
         
         for index, file in enumerate(valid_files, 1):
