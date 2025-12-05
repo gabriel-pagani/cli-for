@@ -6,7 +6,7 @@ from server.connection import server_request, close_connection
 
 
 def get_cnpj(cnpj: str) -> bool:
-    query = f"SELECT * FROM FCFO WHERE CGCCFO = '{cnpj}'"
+    query = f"SELECT * FROM FCFO WHERE CGCCFO = '{cnpj}' AND CODCOLIGADA IN (1,5,6)"
     try:
         response = server_request(query=query)
         close_connection()
