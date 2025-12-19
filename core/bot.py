@@ -68,7 +68,7 @@ def bot(formatted_data: dict, clifor: str, insc_est: str = None) -> None:
     pyautogui.write(formatted_data['Cep'])
     pyautogui.press('tab')
 
-    time.sleep(3)  # Espera o sistema processar o CEP
+    time.sleep(6)  # Espera o sistema processar o CEP
     pyautogui.click(x=1373, y=736)  # Fecha o menu
     pyautogui.click(x=1373, y=715)  # Fecha o menu
 
